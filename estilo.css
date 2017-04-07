@@ -1,0 +1,46 @@
+table {
+        border-collapse: collapse;
+        }
+        
+    table, th, td {
+        border: 1px solid black:
+        }
+    
+  h1 {
+    color: #FFFAF0;
+    background:#000000;
+    text-align: center;
+    font-family: "Arial";
+    padding:20px;
+     }
+      h2 {       
+    color: #000000;
+    background:#ffffff;
+    text-align: center;
+    font-family: "Arial";
+    padding:20px;
+     }
+     
+      h3 {
+    color: #FFFAF0;
+    background:#000000;
+    text-align: center;
+    font-family: "Arial";
+    padding:20px;
+     }
+     
+      img { 
+   float: left;
+  }
+  
+  p{
+    font-family: "Arial";
+    text-align: justify;
+  }
+  
+  p.rod{    color: #FFFAF0;
+    background:#66CDAA;
+    text-align: center;
+    font-family: "Arial";
+    padding:15px;
+     }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #36415B; 
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #6F80A1; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #36415B; 
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #00C5FF !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Sidenir Junior</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">MATÉRIAS</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTATO</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  
+  <img src="https://lh4.googleusercontent.com/Shr-4QwFDiBxLcKEj_LN-bYvu8W-vQdmrMSc83vp69f9xtiIMGT07SkK33XUxq09ir4gcBGgMGoQqp0=w1600-h794-rw" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>Sidenir Junior</h3>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Quem Sou Eu?</h3>
+  <p> Meu nome é Sidenir Antônio da Silva Junior, tenho 16 anos e sou estudante de Informática para Internet no
+  IFES - Campus Serra.
+      </p>
+   
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Portifólio</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Marilândia - ES</p>
+      <img src="https://lh3.googleusercontent.com/xB0y9F3IJ1oZK1KQ6LFPNAaXmByeH17p56xPEPnCHzXdEVQQ_kg_9V0IS1RCt6zZdq6RY-mknkNqj_w=w1547-h439-rw" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Serra - ES</p>
+      <img src="https://lh4.googleusercontent.com/z1s5WhbApXrd0Ld8NdQ2PkXb0ZY_nzkXNeojIlzH5DKaxCE3ZoAxeVv6fQpmwUc_X9ybLQdeIe7kG64=w1547-h424-rw" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Vitória - ES</p>
+      <img src="https://lh3.googleusercontent.com/TXx33g3iENxtZ4fxs0SmxzA6zZh7xhCuJHhDFcUrCA4PiB8FWC07jYUYXAO7ISkWCF0anSVk7Kb9cnI=w1600-h794-rw" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>©Sidenir Junior </p> 
+</footer>
+
+</body>
+</html>

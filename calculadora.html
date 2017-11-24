@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>__Calculadora__</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+.col-sm-3 {
+	border: 0;
+	margin: 0;
+}
+
+</style>  
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row">
+				
+		<div class="col-xs-4"></div>
+		<div class="col-xs-4">
+        <div class="form-group">
+  <label for="campo">Calculadora</label>
+  <input type="text" id="campo"  class="form-control" name="campo" >
+</div>
+		
+			<div class="col-xs-3">	
+				<input type="button"  value="1" id="1" style="background-color:black ; border: none; color: white; border-radius: 8px; width: 50px; height: 50px;" onclick="botao(1)"/><br/>
+				<input type="button"  value="4" id="4" style="background-color:black ; border: none;color:white; border-radius: 8px; width: 50px;height: 50px;" onclick="botao(4)"/><br/>
+				<input type="button"  value="7" id="7" style="background-color:black ; border: none; color:white; border-radius: 8px; width: 50px;height: 50px;" onclick="botao(7)"/><br/>
+				<input type="button"  value="C" id="reset" style="background-color:#ff0066 ; border: none;color:#adfcfa; border-radius: 8px; width: 50px; height: 50px;" onclick="limpo()"/>
+			</div>
+			<div class="col-xs-3">
+				<input type="button"  value="2" id="2" style="background-color:black ; border: none; color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="botao(2)"/><br/>
+				<input type="button"  value="5" id="5" style="background-color:black ; border: none; color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="botao(5)"/><br/>
+				<input type="button"  value="8" id="8" style="background-color:black ; border: none; color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="botao(8)"/><br/>
+				<input type="button"  value="0" id="0" style="background-color:black ; border: none;color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="botao(0)"/>
+			</div>
+			<div class="col-xs-3">
+				<input type="button"  value="3" id="3" style="background-color:black ; border: none;color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="botao(3)"/>  <br/>  
+				<input type="button"  value="6" id="6" style="background-color:black ; border: none; color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="botao(6)"/><br/>
+				<input type="button"  value="9" id="9" style="background-color:black ; border: none;color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="botao(9)"/><br/>
+				<input type="button"  value="=" id="igualdade" style="background-color:#adfcfa ; border: none;color:#eb56a8; border-radius: 8px; width: 50px; height: 50px;" onclick="resul()"/>
+			</div>
+			<div class="col-xs-3">
+				<input type="button"  value="+" id="soma" style="background-color:#eb56a8 ; border: none; color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="op('+')"/><br/>
+				<input type="button"  value=" -" id="subtracao" style="background-color:#eb56a8 ; border: none; color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="op('-')"/><br/>
+				<input type="button"  value=" /" id="divisao" style="background-color:#eb56a8 ; border: none;color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="op('/')"/><br/>
+				<input type="button"  value="*" id="multiplicacao" style="background-color:#eb56a8 ;border: none; color:white; border-radius: 8px; width: 50px; height: 50px;" onclick="op('*')"/>
+			</div>
+		</div>
+	</div>
+</div>			
+
+ 
+ <script>
+	
+	var operacao="";
+	var n1 = 0;
+	var auxiliar = 0;
+	var n2 = 0;
+	var resultado = 0;
+	var text = "";
+	
+	
+	
+	function botao(b) {
+		if (auxiliar==0){
+			var tela = document.getElementById("campo").value;
+			document.getElementById("campo").value = tela.concat(b);
+			n1=parseFloat(document.getElementById("campo").value);
+		}
+		else{
+			var tela = document.getElementById("campo").value;
+			document.getElementById("campo").value=tela.concat(b);
+			text = text.concat(b);
+			n2=parseFloat(text);
+		
+		}
+      
+		}
+	function op(n) {
+	operacao=n
+	auxiliar = 1
+	document.getElementById("campo").value= n1 + operacao;
+	
+	}
+	function limpo(){
+	operacao="";
+	n1 = 0;
+	auxiliar = 0;
+	n2 = 0;
+	document.getElementById("campo").value="";
+	resultado=0;
+
+	
+	}
+	function resul() {
+	
+	
+	if (operacao == '+'){
+	  resultado=n1+n2;
+	  document.getElementById("campo").value= resultado;
+	  }
+	    
+	if (operacao == '-'){
+	  resultado=n1-n2;
+	  document.getElementById("campo").value= resultado;
+	  }
+	
+	if (operacao == '*'){
+	  resultado=n1*n2;
+	  document.getElementById("campo").value= resultado;
+	  }
+	  
+	if (operacao == '/'){
+	  resultado=n1/n2;
+	  document.getElementById("campo").value= resultado;
+	  }
+  
+} 
+
+	
+	
+	
+	
+	</script>	
+
+</body>
+</html>
+
+calculadora.html
+Abrir com o Documentos Google
+Exibindo calculadora.html…
+1 upload concluído
+HTML
+calculadora.html
